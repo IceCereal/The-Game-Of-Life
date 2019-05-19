@@ -1,0 +1,5 @@
+# VSCODE Dump
+.vscode/
+
+# temp files
+temp-*
