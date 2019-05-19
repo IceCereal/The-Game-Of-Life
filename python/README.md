@@ -12,3 +12,6 @@ Parameters that you can modify:
 # Starting Configs:
 #### R-Pentomino
 ![](A-Game-Of-Life-1.gif)
+
+#### Randomized
+![](A-Game-Of-Life-2.gif)
