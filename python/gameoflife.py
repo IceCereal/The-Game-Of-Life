@@ -84,3 +84,28 @@ while not done:
 		# MOUSE CLICK - EXIT SCREEN
 		if event.type == pygame.QUIT:
 			done = True
+
+	# DRAW GRID
+	for row in range(WIDTH):
+		for column in range(HEIGHT):
+			# DEFAULT COLOR: BLACK
+			color = pygame.color.THECOLORS['black']
+
+			# IF CELL == ON, CHANGE COLOR TO RED
+			if grid[row][column] == 1:
+				color = pygame.color.THECOLORS['red']
+			
+			# DRAW RECTANGLE
+			pygame.draw.rect(screen, color, [column*widthBox, row*heightBox, widthBox, heightBox])
+
+	# UPDATE GRID
+	updateGrid()
+
+	# INCREASE THE VALUE FOR FASTER UPDATION
+	clock.tick(10)
+
+	# UPDATE THE SCREEN
+	pygame.display.flip()
+
+# EXIT PYGAME
+pygame.quit()
