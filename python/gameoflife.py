@@ -62,3 +62,17 @@ def updateGrid():
 			else:
 				if (netVals[row][column] == upperBound):
 					grid[row][column] = 1
+
+# PYGAME DISPLAY STARTS HERE:
+pygame.init()
+
+# CHANGE WINDOW SIZE ACCORDING TO MONITOR SIZE
+Window_Size = [1000, 1000]
+
+widthBox = Window_Size[0] / WIDTH
+heightBox = Window_Size[1] / HEIGHT
+
+screen = pygame.display.set_mode(Window_Size)
+pygame.display.set_caption("Game of Ice")
+
+clock = pygame.time.Clock()
