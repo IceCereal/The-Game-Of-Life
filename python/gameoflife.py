@@ -76,3 +76,11 @@ screen = pygame.display.set_mode(Window_Size)
 pygame.display.set_caption("Game of Ice")
 
 clock = pygame.time.Clock()
+
+done = False
+
+while not done:
+	for event in pygame.event.get():
+		# MOUSE CLICK - EXIT SCREEN
+		if event.type == pygame.QUIT:
+			done = True
