@@ -109,6 +109,10 @@ pygame.display.set_caption("Game of Ice")
 
 clock = pygame.time.Clock()
 
+# CHANGE THIS FOR SPEED OF THE UPDATION (This is basically fps limit)
+# HIGH NUMBER = FASTER UPDATE
+speed_update = 10
+
 done = False
 
 while not done:
@@ -133,8 +137,7 @@ while not done:
 	# UPDATE GRID
 	updateGrid()
 
-	# INCREASE THE VALUE FOR FASTER UPDATION
-	clock.tick(10)
+	clock.tick(speed_update)
 
 	# UPDATE THE SCREEN
 	pygame.display.flip()
