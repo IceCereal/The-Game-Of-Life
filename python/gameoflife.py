@@ -81,6 +81,19 @@ if ssc == 1:
 	grid[x+2][y+1] = 1
 	grid[x+2][y+2] = 0
 
+### Random
+# Randomized start locations
+if ssc == 2:
+	# CHANGE THIS FOR NUMBER OF STARTING POINTS
+	startLocations = 4000
+
+	for i in range(startLocations):
+		random.seed()
+		valueWidth = random.randint(0, WIDTH-1)
+		random.seed()
+		valueHeight = random.randint(0, HEIGHT-1)
+		grid[valueHeight][valueWidth] = 1
+
 
 # PYGAME DISPLAY STARTS HERE:
 pygame.init()
