@@ -46,3 +46,19 @@ def updateGrid():
 	for row in range(1, maxRow):
 		for column in range(1, maxColumn):
 			netVals[row][column] = grid[row-1][column-1] + grid[row-1][column] + grid[row-1][column+1] + grid[row][column+1] + grid[row+1][column+1] + grid[row+1][column] + grid[row+1][column-1] + grid[row][column-1]
+
+	# EVALUATION METRIC
+	for row in range(0, maxRow+1):
+		for column in range(0, maxColumn+1):
+			state = grid[row][column]
+
+			if (state):
+				if netVals[row][column] < lowerBound:
+					grid[row][column] = 0
+
+				if netVals[row][column] > upperBound:
+					grid[row][column] = 0
+
+			else:
+				if (netVals[row][column] == upperBound):
+					grid[row][column] = 1
