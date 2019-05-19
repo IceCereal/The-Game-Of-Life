@@ -8,3 +8,7 @@ Parameters that you can modify:
 4. `startLocations` - If `ssc` is 2 (Randomized), then `startLocations` are the number of points of spawn [default: `4000`]
 5. `Window_Size` - Size of the window (display) [default: `(1000, 1000)`]
 6. `speed_update` - Speed of updation of the Game of Life [default: `10`]
+
+# Starting Configs:
+#### R-Pentomino
+![](A-Game-Of-Life-1.gif)
