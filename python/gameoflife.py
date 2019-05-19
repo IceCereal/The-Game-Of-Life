@@ -63,6 +63,25 @@ def updateGrid():
 				if (netVals[row][column] == upperBound):
 					grid[row][column] = 1
 
+# SELECT START CONFIG
+ssc = 1
+
+### R-pentomino
+# It is by far the most active polyomino with fewer than six cells
+if ssc == 1:
+	x = int(HEIGHT/2)
+	y = int (WIDTH/2)
+	grid[x][y] = 0
+	grid[x][y+1] = 1
+	grid[x][y+2] = 1
+	grid[x+1][y] = 1
+	grid[x+1][y+1] = 1
+	grid[x+1][y+2] = 0
+	grid[x+2][y] = 0
+	grid[x+2][y+1] = 1
+	grid[x+2][y+2] = 0
+
+
 # PYGAME DISPLAY STARTS HERE:
 pygame.init()
 
